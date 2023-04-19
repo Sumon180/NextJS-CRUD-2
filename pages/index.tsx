@@ -3,14 +3,18 @@ import { Inter } from 'next/font/google'
 import Table from '@/components/Table';
 import Form from '@/components/Form';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleChangeAction } from '@/redux/reducer';
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
-  const [visible, setVisible] = useState(false)
+
+  const visible = useSelector((state: any) => state.app.client.toggleForm)
+  const dispatch = useDispatch()
 
   const handler = () => {
-    setVisible(!visible)
+    dispatch(toggleChangeAction())
   }
 
 
@@ -24,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      { visible ? <Form></Form> : <></>}
+      {visible ? <Form></Form> : <></>}
 
       <div className='container mx-auto'>
         <Table></Table>
