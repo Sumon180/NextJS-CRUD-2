@@ -3,7 +3,7 @@ import { getUsers } from '@/lib/helper';
 import Image from 'next/image';
 import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleChangeAction, updateAction } from '@/redux/reducer';
+import { deleteAction, toggleChangeAction, updateAction } from '@/redux/reducer';
 
 interface User {
     _id: any;
@@ -56,6 +56,13 @@ function Tr({ _id, name, avatar, email, salary, date, status }: TrProps) {
         }
     };
 
+    const onDelete = () => {
+
+        if (!visible) {
+            dispatch(deleteAction(_id));
+        }
+    };
+
     return (
         <tr>
             <td className="flex items-center gap-5">
@@ -87,6 +94,7 @@ function Tr({ _id, name, avatar, email, salary, date, status }: TrProps) {
                     color="rgb(34, 197, 94)"
                 />
                 <BiTrash
+                    onClick={onDelete}
                     className="cursor-pointer"
                     size={25}
                     color="rgb(197, 34, 34)"
