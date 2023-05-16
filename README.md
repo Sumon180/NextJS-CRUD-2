@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 ### Example video tutorial: https://www.youtube.com/watch?v=RKDfKbLJkZQ
+### Example Github link: https://github.com/akashyap2013/CRUD_NextJs_Complete_Course
 
 First, run the development server:
 
