@@ -1,6 +1,6 @@
 
 
-const Bug = ({ message }: any) => {
+const BugToast = ({ message }: any) => {
     return (
         <div className="toast toast-top toast-start">
             <div className="alert alert-info">
@@ -12,4 +12,4 @@ const Bug = ({ message }: any) => {
     )
 }
 
-export default Bug
+export default BugToast

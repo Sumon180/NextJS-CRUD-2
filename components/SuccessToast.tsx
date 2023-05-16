@@ -1,6 +1,6 @@
 import { BiCheck } from 'react-icons/bi'
 
-const Success = ({ message }: any) => {
+const SuccessToast = ({ message }: any) => {
     return (
         <div className="toast toast-top toast-start">
             <div className="alert alert-success">
@@ -12,4 +12,4 @@ const Success = ({ message }: any) => {
     )
 }
 
-export default Success
+export default SuccessToast
